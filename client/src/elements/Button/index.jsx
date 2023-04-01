@@ -68,7 +68,7 @@ export default function Button(props) {
       return (
         <Link
           to={props.href}
-          className={className.join('')}
+          className={className.join(' ')}
           style={props.style}
           onClick={onClick}
         >
@@ -77,8 +77,6 @@ export default function Button(props) {
       )
     }
   }
-
-  return <div>Button</div>
 }
 
 /**
@@ -97,4 +95,5 @@ Button.propTypes = {
   isBlock: propTypes.bool,
   hasShadow: propTypes.bool,
   isExternal: propTypes.bool,
+  isPrimary: propTypes.bool,
 }
